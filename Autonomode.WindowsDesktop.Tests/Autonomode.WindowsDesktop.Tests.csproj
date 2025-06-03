@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\" />
+    <Folder Include="Tests\" />
+    <Folder Include="Steps\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MSTest.TestAdapter" Version="3.9.1" />
+    <PackageReference Include="MSTest.TestFramework" Version="3.9.1" />
+    <PackageReference Include="SpecFlow" Version="3.9.74" />
+    <PackageReference Include="SpecFlow.MsTest" Version="3.9.74" />
+    <PackageReference Include="YamlDotNet" Version="16.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Autonomode.WindowsDesktop.Annotations\Autonomode.WindowsDesktop.Annotations.csproj" />
+    <ProjectReference Include="..\Autonomode.WindowsDesktop.Core\Autonomode.WindowsDesktop.Core.csproj" />
+    <ProjectReference Include="..\Autonomode.WindowsDesktop.Driver\Autonomode.WindowsDesktop.Driver.csproj" />
+    <ProjectReference Include="..\Autonomode.WindowsDesktop.Models\Autonomode.WindowsDesktop.Models.csproj" />
+    <ProjectReference Include="..\Autonomode.WindowsDesktop.Reporting\Autonomode.WindowsDesktop.Reporting.csproj" />
+    <ProjectReference Include="..\Autonomode.WindowsDesktop.Resources\Autonomode.WindowsDesktop.Resources.csproj" />
+  </ItemGroup>
+
+</Project>
