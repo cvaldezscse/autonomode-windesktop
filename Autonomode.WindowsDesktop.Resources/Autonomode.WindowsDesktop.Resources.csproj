@@ -6,4 +6,18 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Templates\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Autonomode.WindowsDesktop.Core\Autonomode.WindowsDesktop.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="configuration.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

@@ -1,6 +1,6 @@
-﻿namespace Autonomode.WindowsDesktop.Core
+﻿namespace Autonomode.WindowsDesktop.Core.Base
 {
-    public class Class1
+    public class BasePage
     {
 
     }

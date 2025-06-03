@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Autonomode.WindowsDesktop.Core.Base
 {
-    internal class TestBase
+    public class TestBase
     {
     }
 }
