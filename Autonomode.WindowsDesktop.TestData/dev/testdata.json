@@ -1,0 +1,56 @@
+﻿{
+  "_metadata": {
+    "environment": "development",
+    "lastUpdated": "2025-06-26",
+    "description": "Demo test data for functional validation"
+  },
+
+  "TEST-001": {
+    "username": "demo_user",
+    "password": "Demo123!",
+    "search": "demo functionality",
+    "locations": [ "Demo Location 1", "Demo Location 2", "Demo Location 3" ],
+    "expectedResult": "Demo login successful",
+    "timeout": 25,
+    "retryAttempts": 2
+  },
+
+  "TEST-002": {
+    "username": "admin_demo",
+    "email": "admin@demo.autonomode.com",
+    "formData": {
+      "firstName": "Demo",
+      "lastName": "Administrator",
+      "department": "IT Demo"
+    },
+    "permissions": [ "read", "write", "admin" ],
+    "expectedDialog": "Admin Demo Panel"
+  },
+
+  "TEST-003": {
+    "navigation": {
+      "startPage": "Demo Dashboard",
+      "menuSequence": [ "Tools", "Demo", "Settings" ],
+      "expectedPage": "Demo Settings"
+    },
+    "complexData": {
+      "numbers": [ 1, 2, 3, 4, 5 ],
+      "settings": {
+        "enabled": true,
+        "threshold": 50
+      }
+    }
+  },
+
+  "globalVariables": {
+    "demoEnvironment": "development",
+    "baseUrl": "https://demo.autonomode.com",
+    "apiTimeout": 30000,
+    "demoSettings": {
+      "feature1": true,
+      "feature2": false,
+      "maxUsers": 100
+    },
+    "testDataLocation": "Autonomode.WindowsDesktop.TestData project"
+  }
+}

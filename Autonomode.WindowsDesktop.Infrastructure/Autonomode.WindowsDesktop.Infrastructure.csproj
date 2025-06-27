@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
-    <PackageReference Include="YamlDotNet" Version="13.0.2" />
+    <ProjectReference Include="..\Autonomode.WindowsDesktop.Application\Autonomode.WindowsDesktop.Application.csproj" />
+    <ProjectReference Include="..\Autonomode.WindowsDesktop.Core\Autonomode.WindowsDesktop.Core.csproj" />
   </ItemGroup>
 
 </Project>

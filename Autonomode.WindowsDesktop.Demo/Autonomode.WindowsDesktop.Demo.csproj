@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SpecFlow" Version="3.9.74" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Autonomode.WindowsDesktop.Core\Autonomode.WindowsDesktop.Core.csproj" />
+    <ProjectReference Include="..\Autonomode.WindowsDesktop.Infrastructure\Autonomode.WindowsDesktop.Infrastructure.csproj" />
+    <ProjectReference Include="..\Autonomode.WindowsDesktop.TestData\Autonomode.WindowsDesktop.TestData.csproj" />
+  </ItemGroup>
+
+</Project>

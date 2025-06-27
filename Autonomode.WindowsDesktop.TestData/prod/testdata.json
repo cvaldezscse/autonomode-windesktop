@@ -1,0 +1,106 @@
+﻿{
+  // Staging Environment - Production-like Test Data
+  // Realistic data that mirrors production scenarios
+
+  "TEST-001": {
+    "username": "admin.staging",
+    "password": "StagingAdmin2025!",
+    "search": "production deployment",
+    "locations": [ "Production Zone 1", "Production Zone 2", "Backup Zone" ],
+    "expectedResult": "Authentication successful",
+    "timeout": 20,
+    "retryAttempts": 2
+  },
+
+  "TEST-002": {
+    "username": "operator.staging",
+    "password": "StagingOp2025!",
+    "email": "operator@staging.autonomode.com",
+    "search": "system monitoring",
+    "categories": [ "Monitoring", "Alerts", "Performance" ],
+    "permissions": [ "read", "monitor", "acknowledge" ],
+    "expectedDialog": "System Monitor Dashboard",
+    "validateFields": [ "username", "email", "lastAccess" ]
+  },
+
+  "TEST-003": {
+    "filename": "production_report.xlsx",
+    "filepath": "/data/staging/reports/",
+    "content": "Staging environment performance data",
+    "encoding": "UTF-8",
+    "expectedSize": 2048000,
+    "operations": [ "generate", "validate", "archive" ],
+    "validationRules": {
+      "maxSize": 10485760,
+      "allowedExtensions": [ ".xlsx", ".csv", ".pdf" ]
+    }
+  },
+
+  "TEST-004": {
+    "formFields": {
+      "companyName": "Staging Corp",
+      "contactPerson": "Jane Manager",
+      "email": "jane@staging.corp.com",
+      "phone": "+1-555-987-6543",
+      "employees": 250,
+      "industry": "Technology"
+    },
+    "validationRules": {
+      "required": [ "companyName", "contactPerson", "email" ],
+      "emailFormat": true,
+      "phoneFormat": "+X-XXX-XXX-XXXX",
+      "employeeRange": {
+        "min": 1,
+        "max": 10000
+      }
+    },
+    "expectedErrors": [],
+    "submitButton": "Register Company"
+  },
+
+  "TEST-005": {
+    "navigation": {
+      "startPage": "Control Panel",
+      "menuSequence": [ "System", "Configuration", "Environment" ],
+      "expectedPage": "Environment Configuration",
+      "breadcrumb": [ "Control Panel", "System", "Configuration", "Environment" ]
+    },
+    "windowProperties": {
+      "title": "Environment Configuration - Autonomode Staging",
+      "width": 1400,
+      "height": 900,
+      "resizable": true
+    },
+    "elements": {
+      "applyButton": "//button[@id='apply-config']",
+      "revertButton": "//button[@id='revert-config']",
+      "testButton": "//button[@id='test-config']"
+    }
+  },
+
+  "globalVariables": {
+    "baseUrl": "https://staging.autonomode.com",
+    "apiTimeout": 20000,
+    "defaultWaitTime": 8,
+    "screenshotOnFailure": true,
+    "environment": "staging",
+    "browserSettings": {
+      "headless": false,
+      "windowSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "pageLoadTimeout": 20
+    },
+    "databaseConfig": {
+      "connectionString": "Server=staging-db;Database=TestDB;Integrated Security=true;",
+      "timeout": 20,
+      "retryAttempts": 2
+    },
+    "performanceThresholds": {
+      "pageLoadTime": 3000,
+      "apiResponseTime": 1000,
+      "databaseQueryTime": 500
+    }
+  }
+}

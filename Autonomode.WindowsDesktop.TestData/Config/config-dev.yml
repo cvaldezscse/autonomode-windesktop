@@ -1,0 +1,29 @@
+﻿
+# Demo Configuration - Located in TestData Project
+# This config uses relative paths that work from Demo execution context
+environment: "dev"
+
+application:
+  targetApplicationPath: "C:/Demo/TestApp.exe"
+  defaultTimeoutSeconds: 30
+  elementSearchTimeoutSeconds: 10
+  enableScreenshots: true
+  screenshotPath: "./Screenshots/demo"
+
+testData:
+  basePath: "./dev"
+  usersDataFile: "testdata.json"
+  testCasesDataFile: "testcases.json"
+  databaseConnectionString: "Server=demo-db;Database=TestDB;Trusted_Connection=true;"
+
+logging:
+  level: "Debug"
+  filePath: "./Logs/demo/test-execution.log"
+  enableConsoleOutput: true
+  maxFileSizeMB: 100
+
+reporting:
+  outputPath: "./Reports/demo"
+  generateHtmlReport: true
+  attachScreenshots: true
+  reportTitle: "Autonomode Demo - Test Data System Validation"

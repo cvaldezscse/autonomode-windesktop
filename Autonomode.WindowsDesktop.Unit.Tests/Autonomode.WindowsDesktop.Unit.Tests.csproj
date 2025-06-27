@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Autonomode.WindowsDesktop.Application\Autonomode.WindowsDesktop.Application.csproj" />
+    <ProjectReference Include="..\Autonomode.WindowsDesktop.Core\Autonomode.WindowsDesktop.Core.csproj" />
+    <ProjectReference Include="..\Autonomode.WindowsDesktop.Infrastructure\Autonomode.WindowsDesktop.Infrastructure.csproj" />
+    <ProjectReference Include="..\Autonomode.WindowsDesktop.TestData\Autonomode.WindowsDesktop.TestData.csproj" />
+    <ProjectReference Include="..\Autonomode.WindowsDesktop.UI.Automation\Autonomode.WindowsDesktop.UI.Automation.csproj" />
+  </ItemGroup>
+
+</Project>

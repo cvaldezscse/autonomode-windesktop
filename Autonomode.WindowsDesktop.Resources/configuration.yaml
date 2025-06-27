@@ -1,8 +1,0 @@
-app:
-  name: "Calculator"
-  path: "calc.exe"
-  waitTime: 5
-
-test:
-  environment: "QA"
-  reportPath: "Reports/"

@@ -1,0 +1,28 @@
+﻿# Production Environment Configuration  
+# Optimized for performance and security
+environment: "production"
+
+application:
+  targetApplicationPath: "C:/Program Files/YourApp/YourApp.exe"
+  defaultTimeoutSeconds: 20  # Faster timeouts for prod efficiency
+  elementSearchTimeoutSeconds: 8
+  enableScreenshots: false   # Disabled for performance unless failures occur
+  screenshotPath: "./Screenshots/prod"
+
+testData:
+  basePath: "./TestData/prod"
+  usersDataFile: "testdata.json"  # Main JSON file with all test cases
+  testCasesDataFile: "testcases.json"  # Optional additional file
+  databaseConnectionString: "Server=prod-db;Database=TestDB;Integrated Security=true;"
+
+logging:
+  level: "Warning"  # Minimal logging for production performance
+  filePath: "./Logs/prod/test-execution.log"
+  enableConsoleOutput: false  # Console disabled in production
+  maxFileSizeMB: 25
+
+reporting:
+  outputPath: "./Reports/prod"
+  generateHtmlReport: true
+  attachScreenshots: false  # Only on failures
+  reportTitle: "Autonomode PRODUCTION - Test Results"

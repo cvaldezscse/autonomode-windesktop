@@ -1,0 +1,28 @@
+﻿# Staging Environment Configuration
+# Production-like settings with enhanced monitoring
+environment: "staging"
+
+application:
+  targetApplicationPath: "C:/Apps/Staging/YourApp/YourApp.exe"
+  defaultTimeoutSeconds: 30
+  elementSearchTimeoutSeconds: 10
+  enableScreenshots: true
+  screenshotPath: "./Screenshots/staging"
+
+testData:
+  basePath: "./TestData/staging"
+  usersDataFile: "testdata.json"  # Main JSON file with all test cases
+  testCasesDataFile: "testcases.json"  # Optional additional file
+  databaseConnectionString: "Server=staging-db;Database=TestDB;Integrated Security=true;"
+
+logging:
+  level: "Information"
+  filePath: "./Logs/staging/test-execution.log"
+  enableConsoleOutput: true
+  maxFileSizeMB: 50
+
+reporting:
+  outputPath: "./Reports/staging"
+  generateHtmlReport: true
+  attachScreenshots: true
+  reportTitle: "Autonomode STAGING - Test Execution Report"
